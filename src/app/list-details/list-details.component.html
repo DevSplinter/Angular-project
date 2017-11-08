@@ -1,0 +1,50 @@
+<div class="card text-center">
+  <div class="card-header">
+    <h2>Imię Nazwisko</h2>
+  </div>
+  <div class="card-block">
+    <div class="row">
+      <div class="col-md-5">
+          <p>Kod EAN:3423423424</p>
+          <p>Numer telefonu: 725-435-273</p>
+          <p>Informacje dodatkowe: Nie ma chłopa w piątki</p>
+      </div>
+      <div class="col-md-7">
+        <div class="activity__buttons-list">
+          <button (click)="setAddActivity()" class="btn btn-success btn-lg" type="button">
+            <i class="fa fa-plus-square" aria-hidden="true"></i> 
+          Dodaj do zajęć</button>
+          <button class="activity__button btn btn-warning" type="button">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          Historia</button>
+        </div>
+      </div>
+    </div>
+    <h3>Dostępne zajęcia:</h3>
+    <ul class="list-group list-group-flush">
+      <li class="row list-group-item">
+        <div class="col-md-8">
+          <h4>zajecia.nazwa</h4>
+          <ol>
+            <li>zajecia.data</li>
+            <li>zajecia.data</li>
+            <li>zajecia.data</li>
+            <li>zajecia.data</li>
+          </ol>
+        </div>
+        <div class="activity__buttons-list col-md-4">
+          <div class="activity__special-buttons">
+            <button (click)="undoTakePart()" [ngClass]="{'activity__button--hidden': counter == 0}" class="activity__button btn btn-danger" type="button">Cofnij</button>
+            <button (click)="takePart()" class="activity__button btn btn-primary" type="button">Weź udział!</button>
+        </div>
+          <button class="activity__button btn btn-info" type="button">Multisport</button>
+          <button class="activity__button btn btn-warning" type="button">Przenieś zajęcia</button>
+        </div>
+      </li>
+      <li class="list-group-item">Trzeci blok elementów</li>
+    </ul>
+  </div>
+  <div class="card-footer">
+    <p>Ostatnia wizyta</p>
+  </div>
+</div>

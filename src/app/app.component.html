@@ -1,0 +1,88 @@
+<div class="container-fluid">
+  <!-- <div class="row">
+    <h1>Nagłówek główny</h1>
+  </div> -->
+  <div class="row">
+    <div class="main-menu">
+      <button (click)="setCreateCustomer()" class="main-menu__button btn btn-success btn-lg"><i class="fa fa-user-plus" aria-hidden="true"></i>
+        Dodaj klienta</button>
+      <button (click)="setCreateActivity()" class="main-menu__button btn btn-success btn-lg"><i class="fa fa-plus-square" aria-hidden="true"></i>
+        Utwórz zajęcia</button>
+    </div>
+  </div>
+  <div class="row">
+    <app-main-lists class="col-md-5"></app-main-lists>
+    <app-list-details (addFormMode)="setAddActivity($event)" class="col-md-7"></app-list-details>
+    <app-add-new (resetMode)="resetMode($event)" [addFormMode]="addFormMode"></app-add-new>
+  </div>
+</div>
+
+
+
+
+<!--
+  <div class="row">
+    <h1>Nagłówek główny strony</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+        <div class="card text-center">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Wyszukaj</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Zajęcia</a>
+                </li>
+              </ul>
+            
+            
+      <div class="card">
+        <div class="card-title">
+          <h2>Lista użytkowników</h2>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Imię</th>
+              <th>Nazwisko</th>
+              <th>Numer telefonu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr 
+            *ngFor="let person of people; let i = index"
+            (click)=chooseItem(person);
+            >
+              <td>{{ i + 1}}.</td>
+              <td>{{person.name}}</td>
+              <td>{{person.surname}}</td>
+              <td>{{person.phone}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h2>{{sth.name}} {{sth.surname}}</h2>
+        </div>
+        <div class="card-title">
+          <h2>Szczegóły</h2>
+        </div>
+        <table>
+        <tr class="list-group">
+          <td  class="list-group-item">Nazwa zajęć: {{sth.courses[1].credit}}</td>
+        </tr>
+      </table>
+        <div class="card-footer">
+          <p>Data dołączenia:{{sth.startDate}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+-->

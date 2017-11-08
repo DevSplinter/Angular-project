@@ -1,0 +1,90 @@
+<div class="card-block" [ngSwitch]="addFormMode">
+  <div class="form__container" *ngSwitchCase="'createCustomer'">
+    <form class="form__box">
+      <div class="form-group row">
+      <h2>Dodaj klienta</h2>
+      <button type="button" (click)="resetMode()" class="btn btn-danger form__close"><i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+      </div>
+      <div class="form-group row">
+        <label class="col-form-label" for="customerName">Imię:</label>
+        <input type="text" class="form-control" id="customerName" placeholder="Wpisz imię">
+      </div>
+      <div class="form-group row">
+        <label class="col-form-label" for="customerSurame">Nazwisko:</label>
+        <input type="text" class="form-control" id="customerSurname" placeholder="Wpisz nazwisko">
+      </div>
+      <div class="form-group row">
+        <label class="col-form-label" for="customerPhoneNumber">Numer telefonu:</label>
+        <input type="text" class="form-control" id="customerPhoneNumber" placeholder="Wpisz numer telefonu">
+      </div>
+      <div class="form-group row">
+        <label for="chooseActivity">Wybierz zajęcia:</label>
+        <select id="chooseActivity">
+          <option>Pierwsza opcja</option>
+          <option>Druga opcja</option>
+        </select>
+      </div>
+      <div class="form-group row">
+        <label for="chooseCarnetType">Wybierz typ karnetu:</label>
+        <select id="chooseCarnetType">
+          <option>4 wejścia</option>
+          <option>8 wejść</option>
+        </select>
+      </div>
+      <div class="form-group row">
+        <label for="calendar">Wybierz daty zajęć:</label>
+        <input type="date" class="calendar">
+      </div>
+      <button (click)="addNewCustomer()" type="button" class="btn btn-primary">Potwierdź i zapisz!</button>
+    </form>
+  </div>
+  <div class="form__container" *ngSwitchCase="'createActivity'">
+    <form class="form__box">
+      <div class="form-group row">
+        <h2>Utwórz nowe zajęcia</h2>
+        <button type="button" (click)="resetMode()" class="btn btn-danger form__close"><i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="form-group row">
+        <label for="activityName">Nazwa zajęć:</label>
+        <input type="text" class="form-control" id="activityName" placeholder="Wpisz nazwę zajęć">
+      </div>
+      <div class="form-group row">
+        <label for="activityTrainer">Trener:</label>
+        <input type="text" class="form-control" id="activityTrainer" placeholder="Wpisz imię trenera">
+      </div>
+      <div class="form-group row">
+        <label for="activityNumber">Maksymalna liczba uczestników:</label>
+        <input type="number" class="form-control" id="activityNumber">
+      </div>
+      <button type="button" class="btn btn-primary">Potwierdź i zapisz!</button>
+    </form>
+  </div>
+  <div class="form__container" *ngSwitchCase="'addActivity'">
+    <form class="form__box">
+      <h2>Imię Nazwisko - dodaj do zajęć</h2>
+      <button type="button" (click)="resetMode()" class="btn btn-danger form__close"><i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+      <div class="form-group row">
+        <label for="chooseActivity">Wybierz zajęcia:</label>
+          <select id="chooseActivity">
+            <option>Pierwsza opcja</option>
+            <option>Druga opcja</option>
+          </select>
+      </div>
+      <div class="form-group row">
+        <label for="chooseCarnetType">Wybierz typ karnetu:</label>
+        <select id="chooseCarnetType">
+          <option>4 wejścia</option>
+          <option>8 wejść</option>
+        </select>
+      </div>
+        <div class="form-group row">
+        <label for="calendar">Wybierz daty zajęć:</label>
+        <input type="date" class="calendar">
+      </div>
+      <button type="button" class="btn btn-primary">Potwierdź i zapisz!</button>
+    </form>
+  </div>
+</div>
